@@ -7,9 +7,10 @@
 void setup() {
 
   //servo motors
-  servo4.attach(2);
-  servo2.attach(3);
-  servo3.attach(4);
+  servo2.attach(2);
+  servo3.attach(3);
+  servo4.attach(4);
+ // servo2.write(0);
 
   //robot on/off swtich
   pinMode(toggle, INPUT);
@@ -24,12 +25,20 @@ void loop() { //main
 
   //while(digitalRead(toggle) == HIGH){
 
-  
+/* 
+for (int pos = 0; pos < 180; pos ++){
+    //if (digitalRead(toggle) == LOW) break;
+    servo2.write(pos);
+    delay(12);
+}
 
-  //call robot movments
-  moveExample(); 
-
-
+    for (int pos = 180; pos > 0; pos --){
+    //if (digitalRead(toggle) == LOW) break;
+    servo2.write(pos);
+    delay(12);
+    }
+*/
+moveExample();
  // }
 }
 

@@ -1,5 +1,6 @@
 #include <Servo.h>
 #include "servoControllers.h"
+#include "movments.h"
 
 
 //servo postions 
@@ -34,28 +35,14 @@ void setup() {
 
 
 
-void loop() {
+void loop() { //main
 
   //while(digitalRead(toggle) == HIGH){
 
   
 
-  //functions to move servos and take in cords
-  
-  servo2CW(0, 180);
-  delay(200);
-  servo2CCW(180, 0);
-  delay(200);
-
-   servo3CW(0, 180);
-  delay(200);
-  servo3CCW(180, 0);
-  delay(200);
-
- servo4CW(0, 180);
-  delay(200);
-  servo4CCW(180, 0);
-  delay(200);
+  //call robot movments
+  moveExample(); 
 
 
  // }

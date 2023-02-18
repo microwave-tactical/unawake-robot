@@ -1,8 +1,6 @@
 #include <Servo.h>
+#include "servoControllers.h"
 
-Servo servo4; //base roation
-Servo servo2; //base extension 
-Servo servo3; //arm extension 
 
 //servo postions 
 
@@ -18,8 +16,7 @@ int s3pos2 =0; //end pos
 int s4pos1 =0; //start pos
 int s4pos2 =0; //end pos
 
-//robot on/off swtich
-int toggle = 5; 
+
 
 void setup() {
 
@@ -35,78 +32,33 @@ void setup() {
 
 }
 
-//___________________________servo 2___________________________
-
-void servo2CW(int s4pos1, int s4pos2){ //servo4 clock wise rotation
-  for (int pos = s4pos1; pos <= s4pos2; pos += 1){
-    if (digitalRead(toggle) == LOW) break;
-    delay(8);
-    servo4.write(pos);
-  }
-}
-
-void servo2CCW(int s4pos1, int s4pos2){ //servo4 counter clock wise rotation
-  for (int pos = s4pos2; pos >= s4pos1; pos -= 1){
-    if (digitalRead(toggle) == LOW) break;
-    delay(8);
-    servo4.write(pos);
-  }
-}
-
-//___________________________servo 3___________________________
-
-void servo3CW(int s4pos1, int s4pos2){ //servo4 clock wise rotation
-  for (int pos = s4pos1; pos <= s4pos2; pos += 1){
-    if (digitalRead(toggle) == LOW) break;
-    delay(8);
-    servo4.write(pos);
-  }
-}
-
-void servo3CCW(int s4pos1, int s4pos2){ //servo4 counter clock wise rotation
-  for (int pos = s4pos2; pos >= s4pos1; pos -= 1){
-    if (digitalRead(toggle) == LOW) break;
-    delay(8);
-    servo4.write(pos);
-  }
-}
-
-//___________________________servo 4___________________________
-
-void servo4CW(int s4pos1, int s4pos2){ //servo4 clock wise rotation
-  for (int pos = s4pos1; pos <= s4pos2; pos += 1){
-    if (digitalRead(toggle) == LOW) break;
-    delay(8);
-    servo4.write(pos);
-  }
-}
-
-void servo4CCW(int s4pos1, int s4pos2){ //servo4 counter clock wise rotation
-  for (int pos = s4pos2; pos >= s4pos1; pos -= 1){
-    if (digitalRead(toggle) == LOW) break;
-    delay(8);
-    servo4.write(pos);
-  }
-}
-
-
-
 
 
 void loop() {
 
-  while(digitalRead(toggle) == HIGH){
+  //while(digitalRead(toggle) == HIGH){
 
   
 
   //functions to move servos and take in cords
   
-  servo4CW(0, 180);
+  servo2CW(0, 180);
+  delay(200);
+  servo2CCW(180, 0);
+  delay(200);
+
+   servo3CW(0, 180);
+  delay(200);
+  servo3CCW(180, 0);
+  delay(200);
+
+ servo4CW(0, 180);
   delay(200);
   servo4CCW(180, 0);
   delay(200);
 
-  }
+
+ // }
 }
 
 

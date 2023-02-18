@@ -3,21 +3,6 @@
 #include "movments.h"
 
 
-//servo postions 
-
-//servo 2
-int s2pos1 =0; //start pos
-int s2pos2 =0; //end pos
-
-//servo 3
-int s3pos1 =0; //start pos
-int s3pos2 =0; //end pos
-
-//servo 4
-int s4pos1 =0; //start pos
-int s4pos2 =0; //end pos
-
-
 
 void setup() {
 

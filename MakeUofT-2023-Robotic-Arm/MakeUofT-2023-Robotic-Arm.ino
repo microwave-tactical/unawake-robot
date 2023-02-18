@@ -4,7 +4,14 @@ Servo servo4; //base roation
 Servo servo2; //base extension 
 Servo servo3; //arm extension 
 
-int pos1;
+//servo postions 
+
+//servo 4
+int s4pos1 =0; //start pos
+int s4pos2 =0; //end pos
+
+
+//servo3
 
 int toggle = 5; //robot on/off swtich
 
@@ -19,29 +26,26 @@ void setup() {
 
   //robot on/off swtich
   pinMode(toggle, INPUT);
-  pinMode(13, OUTPUT);
-  
 
   Serial.begin(9600);
 
 }
 
-void move1(){
-  
-  for (servo_position = 0; servo_position <=180; servo_position +=1 ){   //pin 9 for yellow, middle is 5v, black or brown is ground 
-      if (digitalRead(toggle) == LOW) break;
-      delay(8);
-      servo4.write(servo_position);
+void servo4CW(int s4pos1, int s4pos2){ //servo4 clock wise rotation
+  for (int pos = s4pos1; pos <= s4pos2; pos += 1){
+    if (digitalRead(toggle) == LOW) break;
+    delay(8);
+    servo4.write(pos);
   }
+}
 
-
-    for (servo_position= 180; servo_position >=0; servo_position -=1){
-         if (digitalRead(toggle) == LOW) break;
-         delay(8);
-         servo4.write(servo_position);
-   }
-  
+void servo4CCW(int s4pos1, int s4pos2){ //servo4 counter clock wise rotation
+  for (int pos = s4pos2; pos >= s4pos1; pos -= 1){
+    if (digitalRead(toggle) == LOW) break;
+    delay(8);
+    servo4.write(pos);
   }
+}
 
 
 
@@ -49,18 +53,16 @@ void loop() {
 
   while(digitalRead(toggle) == HIGH){
 
-  move1();
-
- 
-delay(200);
- 
-
   
 
-
+  //functions to move servos and take in cords
+  
+  servo4CW(0, 180);
+  delay(200);
+  servo4CCW(180, 0);
+  delay(200);
 
   }
-  digitalWrite(13,LOW);
 }
 
 

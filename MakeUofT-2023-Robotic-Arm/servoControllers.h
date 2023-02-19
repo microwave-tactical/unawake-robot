@@ -22,23 +22,26 @@ int s4pos2; //end pos
 int toggle = 5; 
 
 //step delay
-int delayTime = 50; 
+int delayTime2 = 30;
+int delayTime3 = 50;
+int delayTime4 = 25;
+ 
 
 //___________________________servo 2___________________________
 
 void servo2CW(int s2pos1, int s2pos2){ //servo4 clock wise rotation
   for (int pos = s2pos1; pos < s2pos2; pos ++){
-    //if (digitalRead(toggle) == LOW) break;
+    //  if (digitalRead(toggle) == LOW) break;
     servo2.write(pos);
-    delay(delayTime);
+    delay(delayTime2);
   }
 }
 
 void servo2CCW(int s2pos1, int s2pos2){ //servo4 counter clock wise rotation
   for (int pos = s2pos1; pos > s2pos2; pos --){
-    //if (digitalRead(toggle) == LOW) break;
+      //if (digitalRead(toggle) == LOW) break;
     servo2.write(pos);
-    delay(delayTime);
+    delay(delayTime2);
   }
 }
 
@@ -48,15 +51,15 @@ void servo3CW(int s3pos1, int s3pos2){ //servo4 clock wise rotation
   for (int pos = s3pos1; pos < s3pos2; pos ++){
     //if (digitalRead(toggle) == LOW) break;
     servo3.write(pos);
-    delay(delayTime);
+    delay(delayTime3);
   }
 }
 
 void servo3CCW(int s3pos1, int s3pos2){ //servo4 counter clock wise rotation
   for (int pos = s3pos1; pos > s3pos2; pos --){
-    //if (digitalRead(toggle) == LOW) break;
+    //  if (digitalRead(toggle) == LOW) break;
     servo3.write(pos);
-    delay(delayTime);
+    delay(delayTime3);
   }
 }
 
@@ -64,16 +67,16 @@ void servo3CCW(int s3pos1, int s3pos2){ //servo4 counter clock wise rotation
 
 void servo4CW(int s4pos1, int s4pos2){ //servo4 clock wise rotation
   for (int pos = s4pos1; pos < s4pos2; pos ++){
-    //if (digitalRead(toggle) == LOW) break;
+    //  if (digitalRead(toggle) == LOW) break;
     servo4.write(pos);
-    delay(delayTime);
+    delay(delayTime4);
   }
 }
 
 void servo4CCW(int s4pos1, int s4pos2){ //servo4 counter clock wise rotation
   for (int pos = s4pos1; pos > s4pos2; pos --){
-    //if (digitalRead(toggle) == LOW) break;
+     // if (digitalRead(toggle) == LOW) break;
     servo4.write(pos);
-    delay(delayTime);
+    delay(delayTime4);
   }
 }

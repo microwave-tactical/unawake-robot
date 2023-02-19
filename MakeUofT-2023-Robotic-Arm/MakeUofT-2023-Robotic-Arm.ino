@@ -30,7 +30,15 @@ void loop() { //main
   else
 //    digitalWrite(led, false);
 
-  //while(digitalRead(toggle) == HIGH){
+   // while(digitalRead(toggle) == HIGH){
+
+
+moveExample();
+ // }
+}
+
+
+
 
 /* 
 for (int pos = 0; pos < 180; pos ++){
@@ -45,10 +53,6 @@ for (int pos = 0; pos < 180; pos ++){
     delay(12);
     }
 */
-moveExample();
- // }
-}
-
 
 
 

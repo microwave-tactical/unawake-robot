@@ -10,31 +10,34 @@ void setup() {
   servo2.attach(2);
   servo3.attach(3);
   servo4.attach(4);
-  //servo2.write(100);
 
-  //robot on/off swtich
-  pinMode(toggle, INPUT);
+
+  pinMode(toggle, INPUT);   //robot on/off swtich
 //  pinMode(led, OUTPUT);
 
   Serial.begin(9600);
+
+  // move servos to home positions
+  movementHome();
 
 }
 
 
 
 void loop() { //main
-
+/*
   if(digitalRead(toggle) == HIGH){
-//    digitalWrite(led, HIGH);
-   }
+    digitalWrite(led, HIGH);
+  }
   else
-//    digitalWrite(led, false);
+  //digitalWrite(led, false);
 
-   // while(digitalRead(toggle) == HIGH){
-
-
-moveExample();
- // }
+  //while(digitalRead(toggle) == HIGH){
+*/  
+  //moveExample();
+  movement1();
+  
+  //}
 }
 
 

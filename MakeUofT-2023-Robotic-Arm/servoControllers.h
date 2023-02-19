@@ -80,3 +80,18 @@ void servo4CCW(int s4pos1, int s4pos2){ //servo4 counter clock wise rotation
     delay(delayTime4);
   }
 }
+
+
+//___________________________combined___________________________
+
+void servoCW3_CCW4(int s3pos1, int s3pos2, int s4pos1, int s4pos2){ //servo4 clock wise rotation
+  for (int pos1 = s3pos1; pos1 < s3pos2; pos1 ++){
+  for (int pos2 = s4pos1; pos2 > s4pos2; pos2 --){
+ 
+    //if (digitalRead(toggle) == LOW) break;
+    servo4.write(pos1);
+    servo3.write(pos2);
+    delay(delayTime3);
+  }
+ }
+}

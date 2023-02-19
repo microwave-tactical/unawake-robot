@@ -1,7 +1,6 @@
 
 //enter coordinates for movments 
 
-
 void moveExample(){
 
   // base roation servo2
@@ -47,8 +46,17 @@ void movement1(){
 
   servo3CCW(105, 90);
   delay(50);
+  servo_dual(3, 4, 90, 105, 180, 150);
+  delay(300);
+  //servo3CW(100, 105);
+  //delay(300);
+  servo4CW(150, 180); 
+  delay(300);
+  
+  /*
   servo4CCW(180, 150);
   servo3CW(90,100);
+  */
   
 
 }

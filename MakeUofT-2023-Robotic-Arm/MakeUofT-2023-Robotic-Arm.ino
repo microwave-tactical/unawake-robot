@@ -2,7 +2,8 @@
 #include "servoControllers.h"
 #include "movments.h"
 
-//int led = null; 
+int led = 13; 
+int anger = 0;
 
 void setup() {
 
@@ -13,7 +14,7 @@ void setup() {
 
 
   pinMode(toggle, INPUT);   //robot on/off swtich
-//  pinMode(led, OUTPUT);
+  pinMode(led, OUTPUT); // on board LED indicates whether it is trying to move or not
 
   Serial.begin(9600);
 
@@ -26,38 +27,32 @@ void setup() {
 
 void loop() { //main
 /*
-  if(digitalRead(toggle) == HIGH){
-    digitalWrite(led, HIGH);
+  while(digitalRead(toggle) == LOW){
+    // Idle waiting for switch
   }
-  else
-  //digitalWrite(led, false);
-
-  //while(digitalRead(toggle) == HIGH){
-*/  
-  moveExample();
-  //movement2();
-  
-  //}
-}
-
-
-
-
-/* 
-for (int pos = 0; pos < 180; pos ++){
-    //if (digitalRead(toggle) == LOW) break;
-    servo2.write(pos);
-    delay(12);
-}
-
-    for (int pos = 180; pos > 0; pos --){
-    //if (digitalRead(toggle) == LOW) break;
-    servo2.write(pos);
-    delay(12);
+  anger++;
+  while(digitalRead(toggle) == HIGH){ // Don't exit until switch is flipped back to rest state
+    digitalWrite(led, HIGH);
+    
+    //Serial.println(anger);
+    switch (anger) {   
+      case 1:
+        movement1();
+        break;
+      case 2:
+        movement2();
+        break;
+      case 3:  
+        //movement3();
+        break;
     }
+    //Serial.println(anger);
+  }
 */
 
-
+  //moveExample();
+  //movement1();
+}
 
 
 

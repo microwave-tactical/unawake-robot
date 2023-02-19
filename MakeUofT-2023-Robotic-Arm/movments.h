@@ -43,23 +43,18 @@ void movementHome(){
 
 
 void movement1(){
-
+  
   servomv(3, 105, 90);
   delay(50);
-  servomv_dual(3, 4, 90, 105, 180, 150);
+  servomv_dual(3, 90, 87, 4, 180, 150);
   delay(300);
-  //servo3CW(100, 105);
-  //delay(300);
-  servomv(4, 150, 180); 
+  servomv_dual(3, 87, 105, 4, 150, 180); 
   delay(300);
   
-  /*
-  servo4CCW(180, 150);
-  servo3CW(90,100);
-  */
 }
 
 void movement2(){
+  
   servomv(2, 105, 110);
   delay(50);
   servomv(2, 110, 85);
@@ -68,9 +63,6 @@ void movement2(){
   delay(50);
   servomv(2, 115, 105);
   delay(50);
+  
 }
-
-
-// servo4CW(20, 180);
-  //servo4CCW(180, 20);
  

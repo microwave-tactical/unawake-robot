@@ -34,8 +34,8 @@ void loop() { //main
 
   //while(digitalRead(toggle) == HIGH){
 */  
-  //moveExample();
-  movement1();
+  moveExample();
+  //movement2();
   
   //}
 }

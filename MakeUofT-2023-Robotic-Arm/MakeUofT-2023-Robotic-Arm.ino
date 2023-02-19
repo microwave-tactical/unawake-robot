@@ -68,6 +68,7 @@ void loop() { //main
 
   //moveExample();
   //movement1();
+  movement4();
 
   //in case we can't get the switch to toggle, do this for the demo
   //danceydance();

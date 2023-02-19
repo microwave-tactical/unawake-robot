@@ -73,15 +73,15 @@ void movement2(){ //confused, hesitent
   - pause
   - flick the switch and shuts down
    */
-  
-  servomv(2, 105, 110);
+
+   //this came from 3
+  servomv(3, 105, 90);
   delay(50);
-  servomv(2, 110, 85);
-  delay(50);
-  servomv(2, 85, 115);
-  delay(50);
-  servomv(2, 115, 105);
-  delay(50);
+  servomv_dual(3, 90, 87, 4, 180, 150);
+  delay(300);
+  servomv_dual(3, 87, 105, 4, 150, 180); 
+  delay(300);
+
 
   //turning the RGB LED off
   //analogWrite(Red_LED, 0);
@@ -102,12 +102,34 @@ void movement3(){ //annoyed, "okay, buddy"
   - shake back and forth minutely in a 'no' gesture
   - flick the switch and shut down
    */
+
+
+
+  servomv(2,105,150); //shake head
+  delay(50); 
+  servomv(2,150,60);//shake head
+  delay(50); 
+   
+   servomv(2,60,105); //return rotation to certern 
+   //turn off switch
   servomv(3, 105, 90);
   delay(50);
   servomv_dual(3, 90, 87, 4, 180, 150);
   delay(300);
   servomv_dual(3, 87, 105, 4, 150, 180); 
   delay(300);
+
+
+  /* you told me to move this from 2 to 3
+     servomv(2, 105, 110);
+  delay(50);
+  servomv(2, 110, 85);
+  delay(50);
+  servomv(2, 85, 115);
+  delay(50);
+  servomv(2, 115, 105);
+  delay(50);
+   */
 
   //turning the RGB LED off
   //analogWrite(Red_LED, 0);
@@ -127,6 +149,32 @@ void movement4(){
   - turn back and forth (move around a bit)
   - flick the switch and shuts down
    */
+delay(200);
+   servomv(3, 90, 110); //raise up
+   delay(10);
+   
+
+
+     //servomv(4, 180, 20); //hands go up
+   servo4.write(150);
+   delay(10);
+   //servomv(4, 20, 180); //hands go down
+   servo4.write(20);
+   delay(10);
+      delay(10);
+
+  
+   delay(10);
+   
+     //turn off switch
+  servomv(3, 105, 90);
+  delay(50);
+  servomv_dual(3, 90, 87, 4, 180, 150);
+  delay(300);
+  servomv_dual(3, 87, 105, 4, 150, 180); 
+  delay(300);
+
+
 
   //turning the RGB LED off
   //analogWrite(Red_LED, 0);

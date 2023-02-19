@@ -8,7 +8,7 @@ Servo servo3; //arm extension
 int toggle = 5; 
 
 //step delay
-int delayTime2 = 30;
+int delayTime2 = 20;
 int delayTime3 = 50;
 int delayTime4 = 25;
 

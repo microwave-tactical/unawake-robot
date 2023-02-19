@@ -1,3 +1,5 @@
+
+
 Servo servo4; //base extension 
 Servo servo2; //base roation
 Servo servo3; //arm extension 
@@ -23,7 +25,7 @@ void servomv(int snum, int pos1, int pos2){ //servo4 clock wise rotation
   
   for (i = 0; i < j; i++){
     pos1 = pos1 + k;
-    //  if (digitalRead(toggle) == LOW) break;
+      if (digitalRead(toggle) == LOW) break;
     switch (snum) { // Select the servo based on which was chosen    
       case 2:
         servo2.write(pos1);

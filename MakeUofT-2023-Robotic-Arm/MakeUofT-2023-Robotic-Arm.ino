@@ -36,42 +36,65 @@ void setup() {
 
 
 void loop() { //main
-
+;
   while(digitalRead(toggle) == LOW){
     // Idle waiting for switch
   }
-  /*anger++;
+  delay(200);
+  anger++;
+  Serial.println(anger);
   while(digitalRead(toggle) == HIGH){ // Don't exit until switch is flipped back to rest state
     digitalWrite(led, HIGH);
     
     //Serial.println(anger);
+    delay(200);
     switch (anger) {   
       case 1:
+        delay(50);
         movement1();
         break;
       case 2:
+        delay(50);
         movement2();
         break;
       case 3:  
-        //movement3();
+        delay(50);
+        movement3();
         break;
       case 4:
-        //movement4();
+        delay(50);
+        movement4();
         break;
       case 5:
-        //movement5();
+        delay(50);
+        movement5();
+        break;
+      case 6:
+        delay(50);
+        while(1){
+
+        
+        }
         break;
     }
     //Serial.println(anger);
   }
-*/
+
 
   //moveExample();
-  //movement1();
-  movement4();
+  //movement5();
 
   //in case we can't get the switch to toggle, do this for the demo
   //danceydance();
+  
+  //1st
+  //taquellia(0,14);
+  //2nd
+  //taquellia(26,24);
+  //3rd
+  //taquellia(100,57);
+  //4th
+  //taquellia(144, 82);
 }
 
 

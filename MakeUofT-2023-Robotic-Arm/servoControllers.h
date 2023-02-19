@@ -98,7 +98,7 @@ void servomv_dual(int s1, int s1pos1, int s1pos2, int s2, int s2pos1, int s2pos2
           break;
       }
       delay(delayTime3);
-      Serial.println(s1pos1);
+      //Serial.println(s1pos1);
     }
   }
   else {
@@ -142,7 +142,7 @@ void servomv_dual(int s1, int s1pos1, int s1pos2, int s2, int s2pos1, int s2pos2
       }
       delay(delayTime3);
       
-      Serial.println(s1pos1);
+      //Serial.println(s1pos1);
     }
   }
 }

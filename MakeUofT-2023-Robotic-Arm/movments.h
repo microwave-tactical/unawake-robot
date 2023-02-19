@@ -73,7 +73,7 @@ void movement2(){ //confused, hesitent
   - pause
   - flick the switch and shuts down
    */
-
+  
    //this came from 3
   servomv(3, 105, 90);
   delay(50);
@@ -81,7 +81,6 @@ void movement2(){ //confused, hesitent
   delay(300);
   servomv_dual(3, 87, 105, 4, 150, 180); 
   delay(300);
-
 
   //turning the RGB LED off
   //analogWrite(Red_LED, 0);
@@ -104,13 +103,12 @@ void movement3(){ //annoyed, "okay, buddy"
    */
 
 
-
   servomv(2,105,150); //shake head
   delay(50); 
   servomv(2,150,60);//shake head
   delay(50); 
    
-   servomv(2,60,105); //return rotation to certern 
+   servomv(2,60,97); //return rotation to certern 
    //turn off switch
   servomv(3, 105, 90);
   delay(50);
@@ -118,7 +116,6 @@ void movement3(){ //annoyed, "okay, buddy"
   delay(300);
   servomv_dual(3, 87, 105, 4, 150, 180); 
   delay(300);
-
 
   /* you told me to move this from 2 to 3
      servomv(2, 105, 110);
@@ -130,6 +127,7 @@ void movement3(){ //annoyed, "okay, buddy"
   servomv(2, 115, 105);
   delay(50);
    */
+
 
   //turning the RGB LED off
   //analogWrite(Red_LED, 0);
@@ -149,7 +147,8 @@ void movement4(){
   - turn back and forth (move around a bit)
   - flick the switch and shuts down
    */
-delay(200);
+   
+   delay(200);
    servomv(3, 90, 110); //raise up
    delay(10);
    
@@ -175,7 +174,6 @@ delay(200);
   delay(300);
 
 
-
   //turning the RGB LED off
   //analogWrite(Red_LED, 0);
   //analogWrite(Green_LED, 0);
@@ -195,15 +193,34 @@ void movement5(){
   -- throw hands up in frustration, knocking off the dunce cap
   - when the song ends, robot flicks the switch and shuts down
    */
-  taquellia();
-    servomv(2, 105, 110);
+    servomv(2, 97, 110);
     delay(50);
     servomv(2, 110, 85);
     delay(50);
     servomv(2, 85, 115);
     delay(50);
-    servomv(2, 115, 105);
+    servomv(2, 115, 97);
     delay(50);
+  
+  taquellia();
+  
+servo4.write(90);
+servo3.write(120);
+
+delay(500);
+
+servomv_dual(3, 120, 105, 4, 90, 180);
+
+while(digitalRead(toggle) == HIGH){
+
+  servomv(3, 105, 90);
+  delay(50);
+  servomv_dual(3, 90, 87, 4, 180, 150);
+  delay(300);
+  servomv_dual(3, 87, 105, 4, 150, 180); 
+  delay(300);
+
+}
 
   //turning the RGB LED off
   //analogWrite(Red_LED, 0);
@@ -211,23 +228,49 @@ void movement5(){
   //analogWrite(Blue_LED, 0);
 }
 
-void danceydance(){ //if we cannot toggle the switch, call this function for demo
-  taquellia();
-  
+void danceydance(){ //if we cannot toggle the switch, call this function for demo 
   /*
   Desired actions:
   - make the robot wiggle to dance to the song
    */
-   
 
-    servomv(2, 105, 110);
-    delay(50);
-    servomv(2, 110, 85);
-    delay(50);
-    servomv(2, 85, 115);
-    delay(50);
-    servomv(2, 115, 105);
-    delay(50);
+taquellia();
+
+servo4.write(90);
+servo3.write(120);
+
+delay(500);
+
+servomv_dual(3, 120, 105, 4, 90, 180);
+
+/*
+  servomv(2, 97, 130);
+  delay(50);
+  servomv_dual(3, 105, 90, 4, 180, 130);
+  //taquellia(0, 14);
+  
+  servomv_dual(3, 90, 105, 4, 130, 180);
+  servomv(2, 130, 85);
+  servomv_dual(3, 105, 90, 4, 180, 130);
+  //taquellia(26,24);
+  
+  servomv_dual(3, 90, 105, 4, 130, 180);
+  servomv(2, 85, 130);
+  delay(50);
+  servomv_dual(3, 105, 90, 4, 180, 130);
+  //taquellia(100,57);
+  
+  servomv_dual(3, 90, 105, 4, 130, 180);
+  
+  servomv(2, 130, 97);
+  delay(50);
+  servomv_dual(3, 105, 100, 4, 180, 130);
+  taquellia(144, 82);
+
+  servomv(4, 130, 100);
+  delay(100);
+  servomv_dual(3, 100, 105, 4, 100, 180);
+  */
 
 }
  
